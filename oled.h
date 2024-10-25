@@ -1,11 +1,13 @@
-//
-// Created by 18681 on 24-10-8.
-//
-
 #ifndef OLED_H__
 #define OLED_H__
 #include "i2c.h"
 #include "oled_data.h"
+
+/*你可以在这选择你的驱动芯片
+ * sh1106
+ * ssd1306
+ */
+#define sh1106
 #define OLED_ADDRESS 0x78
 #define OLED_hi2c hi2c1
 

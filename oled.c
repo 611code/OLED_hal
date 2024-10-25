@@ -73,7 +73,11 @@ void OLED_Update(void)
     for (uint8_t i = 0; i < OLED_PAGE; i++)
     {
         OLED_SendCmd(0xB0 + i); // 设置页地址
+#ifdef sh1106
+        OLED_SendCmd(0x00+2);     // 设置列地址低4位
+#elifdef ssd1306
         OLED_SendCmd(0x00);     // 设置列地址低4位
+#endif
         OLED_SendCmd(0x10);     // 设置列地址高4位
         memcpy(sendBuffer + 1, OLED_GRAM[i], OLED_COLUMN);
         OLED_Send(sendBuffer, OLED_COLUMN + 1);

@@ -6,8 +6,8 @@
 #define OLED_DATA_H
 
 #include <stdint.h>
-
-#define OLED_CHN_CHAR_WIDTH	2		//UTF-8编码格式给3，GB2312编码格式给2
+//UTF-8编码格式给3，GB2312编码格式给2
+#define OLED_CHN_CHAR_WIDTH	3
 
 extern const uint8_t OLED_F8x16[][16];
 extern const uint8_t OLED_F6x8[][6];
