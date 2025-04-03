@@ -19,7 +19,7 @@ typedef struct
 {
     char Index[OLED_CHN_CHAR_WIDTH + 1];	//汉字索引
     uint8_t Data[32];						//字模数据
-} ChineseCell_t;
-extern const ChineseCell_t OLED_CF16x16[];
+} OLED_ChineseCell_t;
+extern const OLED_ChineseCell_t OLED_CF16x16[];
 
 #endif //OLED_DIVER_OLED_DATA_H
